@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
 
-  const [isShowing, dispatch] = useToggle();
+  const [{isShowing}, dispatch] = useToggle();
 
   return (
     <div className="App">

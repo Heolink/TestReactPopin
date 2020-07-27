@@ -26,10 +26,10 @@ const createSharedState = (reducer, initialState) => {
   return useSharedState;
 };
 
-const initialState = false;
+const initialState = {isShowing: false};
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'toggle': return  !state;
+    case 'toggle': return { ...state, ...{ isShowing: !state.isShowing }};
     default: return state;
   }
 };
